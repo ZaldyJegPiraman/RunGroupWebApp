@@ -1,0 +1,42 @@
+﻿@model Race
+
+@{
+    ViewData["Title"] = "Race Details Page";
+}
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-sm-6">  <h3>@Model.Title</h3><img src="@(Model.Image.ToLower().Contains("http") ? Model.Image : "/" + Model.Image)" class="img-fluid" alt="Paris"> </div>
+        <div class="col-sm-6">
+
+            <br />
+            <br />
+            <br />
+            <h5>@Model.Title</h5>
+            <p>@Model.Description</p>
+            <br />
+            <h5>Location</h5>
+            <ul>
+                <li>@Model.Address.City</li>
+                <li>@Model.Address.State</li>
+                <li>@Model.Address.Street</li>
+                </ul>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-sm-12">
+            <br />
+            <br /><h3>Related Projects</h3>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-sm-3"><h3><img src="https://via.placeholder.com/500x300" class="img-fluid" alt="Paris"></h3>  </div>
+        <div class="col-sm-3"><h3><img src="https://via.placeholder.com/500x300" class="img-fluid" alt="Paris"></h3>  </div>
+        <div class="col-sm-3"><h3><img src="https://via.placeholder.com/500x300" class="img-fluid" alt="Paris"></h3>  </div>
+        <div class="col-sm-3"><h3><img src="https://via.placeholder.com/500x300" class="img-fluid" alt="Paris"></h3>  </div>
+    </div>
+</div>
